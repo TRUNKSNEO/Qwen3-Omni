@@ -231,8 +231,6 @@ huggingface-cli download Qwen/Qwen3-Omni-30B-A3B-Captioner --local-dir ./Qwen3-O
 
 #### Installation
 
-The Hugging Face Transformers code for Qwen3-Omni has been successfully merged. We strongly recommend that you **create a new Python environment** or use our [Docker](#-docker) to avoid environment runtime issues.
-
 We recommend using **Transformers version 5.2.0 or later** for the best performance and accuracy. Older versions, such as **Transformers 4.57.x**, not only deliver weaker performance, but also provide lower accuracy compared with versions **5.2.0 and above**.
 
 ```bash
@@ -490,16 +488,11 @@ Additionally, for more usage details such as prompt settings, task-specific usag
 
 We highly recommend using the latest vLLM-Omni to experience Qwen3-Omni series models. For more details, please refer to the vLLM-Omni official [offline inference documentation](https://docs.vllm.ai/projects/vllm-omni/en/latest/user_guide/examples/offline_inference/qwen3_omni/) and [online inference documentation](https://docs.vllm.ai/projects/vllm-omni/en/latest/user_guide/examples/online_serving/qwen3_omni/).
 
-We also recommend using vLLM for inference and deployment of the Qwen3-Omni series models. Please note that we recommend you **create a new Python environment** or use our provided [Docker](#-docker) to avoid runtime environment conflicts and incompatibilities. 
+We also recommend using vLLM for inference and deployment of the Qwen3-Omni series models. Please note that we recommend you **create a new Python environment** to avoid runtime environment conflicts and incompatibilities. 
 
 ```bash
-pip install vllm==0.13.0
-# If you meet an "Undefined symbol" error while using VLLM_USE_PRECOMPILED=1, please use "pip install -e . -v" to build from source.
-# Install the Transformers
-pip install transformers==4.57.3
-pip install accelerate
+pip install vllm
 pip install qwen-omni-utils -U
-pip install -U flash-attn --no-build-isolation
 ```
 
 #### Inference
