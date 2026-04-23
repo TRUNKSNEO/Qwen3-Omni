@@ -227,16 +227,22 @@ huggingface-cli download Qwen/Qwen3-Omni-30B-A3B-Thinking --local-dir ./Qwen3-Om
 huggingface-cli download Qwen/Qwen3-Omni-30B-A3B-Captioner --local-dir ./Qwen3-Omni-30B-A3B-Captioner
 ```
 
+当然，下面是**保持原有风格与语法**后，加入你要求信息的改写版本：
+
+---
+
 ### Transformers Usage
 
 #### Installation
 
 The Hugging Face Transformers code for Qwen3-Omni has been successfully merged. We strongly recommend that you **create a new Python environment** or use our [Docker](#-docker) to avoid environment runtime issues.
 
+We recommend using **Transformers version 5.2.0 or later** for the best performance and accuracy. Older versions, such as **Transformers 4.57.x**, not only deliver weaker performance, but also provide lower accuracy compared with versions **5.2.0 and above**.
+
 ```bash
 # If you already have transformers installed, please uninstall it first, or create a new Python environment
 # pip uninstall transformers
-pip install transformers==4.57.3
+pip install "transformers>=5.2.0"
 pip install accelerate
 ```
 
